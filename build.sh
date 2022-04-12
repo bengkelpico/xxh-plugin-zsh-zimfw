@@ -21,16 +21,20 @@ do
     cp $CDIR/$f $build_dir/
 done
 
+for f in zimrc
+do
+    cp $CDIR/$f $build_dir/.zimrc
+done
+
 cd $build_dir
 
 [ $QUIET ] && arg_q='-q' || arg_q=''
 [ $QUIET ] && arg_s='-s' || arg_s=''
 [ $QUIET ] && arg_progress='' || arg_progress='--show-progress'
 
-ohmyzsh_home=$build_dir/ohmyzsh
-if [ -x "$(command -v git)" ]; then
-  git clone $arg_q --depth 1 https://github.com/robbyrussell/oh-my-zsh.git $ohmyzsh_home
-else
-  echo Install git
-  exit 1
+zimfw_home=$build_dir/zimfw
+
+if [[ ! -e ${zimfw_home}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${zimfw_home}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
 fi
