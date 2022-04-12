@@ -18,7 +18,7 @@ export ZDOTDIR="$CURR_DIR"
 
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
-  echo "Please run `update_for all` to complete setup"
+  echo "Please run update_for all to complete setup"
 fi
 
 source ${ZIM_HOME}/init.zsh
