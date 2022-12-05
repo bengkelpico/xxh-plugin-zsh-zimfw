@@ -44,5 +44,5 @@ zmodule petervanderdoes/git-flow-completion --name zsh-gitflow --source git-flow
 zmodule tj/git-extras --name zsh-extras --source etc/git-extras-completion.zsh
 zmodule mattberther/zsh-pyenv --name zsh-pyenv
 zmodule picobug/zsh_pico --name zsh-picobug
-zmodule ohmyzsh/ohmyzsh -f 'plugins/docker-compose' -s 'plugins/docker-compose/docker-compose.plugin.zsh' -f 'plugins/composer' -s 'plugins/composer/composer.plugin.zsh'
+zmodule ohmyzsh/ohmyzsh -f 'plugins/docker' -s 'plugins/docker/docker.plugin.zsh' -f 'plugins/docker-compose' -s 'plugins/docker-compose/docker-compose.plugin.zsh' -f 'plugins/composer' -s 'plugins/composer/composer.plugin.zsh'
 
