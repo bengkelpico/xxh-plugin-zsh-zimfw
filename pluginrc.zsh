@@ -5,6 +5,7 @@ path=("$HOME/.local/bin" "$HOME/.bin" "$HOME/.config/composer/vendor/bin" "$HOME
 export PATH
 export ZIM_HOME="$CURR_DIR/zimfw"
 export ZSH_CACHE_DIR="$HOME/.zfunc"
+mkdir -p "$HOME/.zfunc/completions"
 
 if [ ! -x "$(command -v git)" ]; then
   zstyle ':zim:zmodule' use 'degit'
